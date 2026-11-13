@@ -1,6 +1,8 @@
-# Banco New | Business Intelligence Bancário
+# Atividade de Clientes Banco New | Business Intelligence
 
-Projeto de portfólio desenvolvido em **Power BI** para analisar a atividade, a inatividade e a recuperação de clientes de um banco fictício.
+Projeto de portfólio desenvolvido com o objetivo de explorar a integração entre diferentes tecnologias e o fluxo de dados, desde a extração automatizada de informações do Kaggle utilizando Python e KaggleHub, passando pelo tratamento, transformação e modelagem dos dados no Power Query, até a construção de indicadores em DAX.
+
+O Power BI representa a etapa final desse processo, consolidando os conhecimentos adquiridos em um dashboard interativo para análise de atividade, inatividade e recuperação de clientes de um banco fictício.
 
 > **Aviso:** Banco New é uma marca fictícia. O conjunto de dados é sintético e histórico, utilizado exclusivamente para aprendizagem e demonstração de competências em Business Intelligence. Os indicadores não representam resultados de uma instituição financeira real.
 
