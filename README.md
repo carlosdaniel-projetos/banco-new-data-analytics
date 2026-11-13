@@ -58,18 +58,7 @@ Visões construídas:
 - Análise por região, cidade e perfil/canal.
 - Resumo da movimentação no último mês registrado.
 
-### Captura de tela
-
-Adicione uma imagem do relatório em `imagens/dashboard.png` e retire este aviso.
-
-## Como reproduzir
-
-1. Baixe os CSVs do dataset no Kaggle, observando as condições de uso da fonte.
-2. Abra o arquivo `.pbix` da pasta `dashboard/` (a ser adicionado).
-3. No Power Query, ajuste o caminho local dos CSVs.
-4. Atualize as consultas e valide os relacionamentos e indicadores.
-
-> **Importante:** confira a leitura decimal dos valores de `Transaction_Amount` usando a localidade *Inglês (Estados Unidos)* na conversão de texto para número decimal.
+![Dashboard Banco New](./dashboard-banco-new.png)
 
 ## Limitações
 
@@ -80,4 +69,3 @@ Adicione uma imagem do relatório em `imagens/dashboard.png` e retire este aviso
 
 ## Estado do projeto
 
-Dashboard concluído em versão de portfólio. Documentação e publicação de arquivos em andamento.
