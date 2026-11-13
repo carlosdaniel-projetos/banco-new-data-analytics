@@ -22,6 +22,66 @@ Construir uma visão gerencial interativa da carteira de clientes, monitorando a
 
 Arquivos utilizados: `customer_data.csv`, `bank_data.csv` e `transaction_data.csv`.
 
+
+## Extração automatizada com Python
+
+Para obtenção dos dados bancários, foi desenvolvido um script Python no Visual Studio Code, utilizando a biblioteca **KaggleHub** para automatizar o download do dataset disponibilizado no Kaggle.
+
+### Etapas do processo
+
+1. **Configuração do ambiente:** utilização do Python no VS Code e instalação das bibliotecas KaggleHub e Pandas.
+2. **Conexão com o Kaggle:** identificação do dataset por meio de seu endereço na plataforma.
+3. **Extração automatizada:** execução do método `kagglehub.dataset_download()` para baixar os arquivos.
+4. **Armazenamento local:** organização dos dados na pasta `BankAnalytics/dados`.
+5. **Validação da extração:** identificação e listagem dos arquivos baixados para confirmar a conclusão do processo.
+
+### Script de extração
+
+```python
+import kagglehub
+from pathlib import Path
+
+# Definir pasta de destino
+pasta_destino = Path(__file__).resolve().parent / "dados"
+
+# Baixar dataset
+caminho = kagglehub.dataset_download(
+    "yogeshtekawade/banking-and-customer-transaction-data",
+    output_dir=str(pasta_destino)
+)
+
+# Listar arquivos baixados
+arquivos = sorted(
+    arquivo for arquivo in Path(caminho).rglob("*")
+    if arquivo.is_file()
+)
+
+print("BASE BANCÁRIA BAIXADA")
+print(f"Total de arquivos: {len(arquivos)}")
+
+for arquivo in arquivos:
+    print(f"- {arquivo.name}")
+```
+
+### Arquivos obtidos
+
+- `customer_data.csv` — Cadastro e características dos clientes.
+- `bank_data.csv` — Informações das agências bancárias.
+- `transaction_data.csv` — Histórico de transações financeiras.
+
+### Benefícios da automação
+
+A utilização do Python permitiu:
+
+- Automatizar a obtenção dos dados.
+- Reduzir a necessidade de downloads manuais.
+- Organizar os arquivos em um diretório padronizado.
+- Facilitar a reprodução do processo de extração.
+- Integrar programação Python ao fluxo de Business Intelligence.
+
+**Observação:** nesta etapa, o Python foi utilizado exclusivamente para extração e armazenamento dos dados. O tratamento, a transformação e a modelagem foram realizados posteriormente no Power Query e no Power BI.
+
+
 ## Fluxo dos dados
 
 
@@ -67,5 +127,11 @@ Visões construídas:
 - Volumes transacionados não representam receita ou lucro bancário.
 - As categorias de comportamento podem se sobrepor nos cartões; uma composição de 100% exige classificação exclusiva.
 
-## Estado do projeto
+---
+
+## Download do Power BI
+
+O dashboard completo está disponível para exploração no Power BI Desktop.
+
+📊 **[Baixar Dashboard Banco New (.pbix)](./Banco%20New.pbix)**
 
