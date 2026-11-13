@@ -24,15 +24,9 @@ Arquivos utilizados: `customer_data.csv`, `bank_data.csv` e `transaction_data.cs
 
 ## Fluxo dos dados
 
-```text
-Kaggle
-  ↓ KaggleHub (Python)
-CSV local
-  ↓ Power Query
-Modelo semântico no Power BI
-  ↓ DAX
-Dashboard Banco New
-```
+
+![Fluxo completo do projeto Banco New](./fluxo-completo-banco-new-pbi.png)
+
 
 ## Modelo
 
